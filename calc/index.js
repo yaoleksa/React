@@ -54,7 +54,7 @@ class ButtonsSet extends React.Component {
             <button onClick={this.handleClick}>-</button>
             <button onClick={this.handleClick}>*</button>
             <button onClick={this.handleClick}>^</button>
-            <button onClick={this.handleClick}>,</button>
+            <button onClick={this.handleClick}>.</button>
             <button onClick={this.erase}>&#8592;</button>
             <button onClick={this.handleClick}>/</button>
             <button onClick={this.handleClick}>(</button>
