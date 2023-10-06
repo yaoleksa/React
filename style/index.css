@@ -4,6 +4,11 @@ body {
 button {
     font-size: 2rem;
 }
+a {
+    font-size: 4rem;
+    color: aquamarine;
+    margin: 12rem;
+}
 #display {
     width:19.5%;
     height: 4rem;
