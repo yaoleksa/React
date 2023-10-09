@@ -50,6 +50,7 @@ class Form extends React.Component {
                 <input type="button" value="submit" onClick={this.call}></input>
             </form>
             <p id="output"></p>
+            <a id="main_page_link" href="../index.html">Return to main page</a>
         </>)
     }
 }

@@ -72,6 +72,7 @@ class Calculator extends React.Component {
             <>
             <Display/>
             <ButtonsSet/>
+            <a id="main_page_link" href="../index.html">Return to main page</a>
             </>
         );
     }
