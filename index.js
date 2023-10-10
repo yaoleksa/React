@@ -5,6 +5,7 @@ class LinkTree extends React.Component {
     render() {
         return (
         <>
+        <div class="offset_content">
             <div>
                 <a href="./calc/index.html">Calculator</a>
             </div>
@@ -12,8 +13,9 @@ class LinkTree extends React.Component {
                 <a href="./prediction/index.html">Predictor</a>
             </div>
             <div>
-                <a href="#">Something else</a>
+                <a href="./textComparator/index.html">Comparator</a>
             </div>
+        </div>
         </>);
     }
 }

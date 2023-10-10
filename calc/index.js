@@ -4,13 +4,16 @@ import ReactDOM from 'react-dom/client';
 let holder = "";
 
 class Display extends React.Component {
+    preventPaste(event) {
+        event.preventDefault();
+    }
     handleClick(event) {
         if(!/[0-9\-\+\/\*]/.test(event.key)) {
             event.preventDefault();
         }
     }
     render() {
-        return (<><textarea id="display" placeholder="0" onKeyDown={this.handleClick}></textarea></>);
+        return (<><textarea id="display" placeholder="0" onKeyDown={this.handleClick} onPaste={this.handleClick}></textarea></>);
     }
 }
 
@@ -70,9 +73,11 @@ class Calculator extends React.Component {
     render() {
         return (
             <>
+            <div class="offset_content">
             <Display/>
             <ButtonsSet/>
             <a id="main_page_link" href="../index.html">Return to main page</a>
+            </div>
             </>
         );
     }
