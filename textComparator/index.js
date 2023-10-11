@@ -6,22 +6,22 @@ class Areas extends React.Component {
         const compareTo = document.getElementById('compareTo').value;
         const compareWith = document.getElementById('compareWith').value;
         const end = compareTo.length > compareWith.length ? compareTo.length : compareWith.length;
-        let result = "";
+        let similar = true;
         for(let i = 0; i < end; i++) {
             if(i > compareTo.length - 1) {
-                result += `Strings have different length. At ${i} position first string has 
-                ${compareTo[compareTo.length - 1]} symbol, and second string has ${compareWith[i - 1]} symbol. `;
+                continue;
             }
             if(i > compareWith.length - 1) {
-                result += `Strings have different length. At ${i} position first string has 
-                ${compareTo[i - 1]} symbol, and second string has ${compareWith[compareWith.length - 1]} symbol. `;
+                continue;
             }
             if(compareTo[i] != compareWith[i]) {
-                result += `Strings are different at ${i} symbol. First string has ${compareTo[i]} at ${i} place, second string has ${compareWith[i]} at ${i} place. `;
+                document.getElementById('result').innerText += compareTo[i];
+                similar = false;
             }
         }
-        result = result.length == 0 ? "String are similar" : result;
-        document.getElementById('result').innerText = result;
+        if(similar) {
+            document.getElementById('result').innerText = "String are similar";
+        }
     }
     render() {
         return (<>
